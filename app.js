@@ -49,5 +49,12 @@ Test this in your browser.
 - 👉 Go to main.js in the public/js folder, and write the code needed to hook up the button with id 
 "get-cats" to show the data on the front end.
 */
+app.get("/cats", function(req, res) {
+  //get all cats
+  const allCats = cats;
+  // respond with { success: Boolean, payload: cats array }
+  res.json({ 'success': true, 'payload': allCats });
+});
+
 
 export default app;
